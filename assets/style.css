@@ -61,7 +61,9 @@ button:focus-visible,a:focus-visible{outline:2px solid #339cff;outline-offset:3p
 
 /* Hero */
 .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(32px,4.5vw,72px);align-items:center;padding-block:clamp(40px,7vw,104px)}
-h1{font-size:clamp(2.3rem,4.8vw,4rem);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin-bottom:1.5rem}
+/* Font size follows the text column so each headline line («Færre bekymringer.») fits on one line */
+.hero-text{container-type:inline-size;min-width:0}
+h1{font-size:min(clamp(2.3rem,4.8vw,4rem),10.4cqi);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin-bottom:1.5rem}
 h1 em{font-style:normal;color:var(--accent)}
 .intro{font-size:1rem;line-height:1.65;max-width:32rem;color:var(--muted)}
 .actions{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin-top:2rem}
