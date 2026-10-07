@@ -3,265 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OgTech – to nettsideforslag</title>
-<style>
-:root{color-scheme:light dark;--background:light-dark(#fff,#181818);--foreground:light-dark(#1a1c1f,#dfdfdf);--border:light-dark(#ddd,#444);--font-sans:Arial,Helvetica,sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans);line-height:1.625}h1,h2,h3,p{margin:0}button,summary{cursor:pointer}button{font:inherit}a{color:inherit}svg{display:block} [hidden]{display:none!important}
-.viz-carousel{position:relative;padding-bottom:60px}.viz-carousel-controls{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;align-items:center;border:1px solid var(--border);border-radius:16px;background:var(--background);font-size:13px;line-height:18px;width:max-content;max-width:calc(100% - 40px)}.viz-carousel-controls button,.viz-carousel-picker>summary{display:flex;align-items:center;justify-content:center;gap:6px;border:0;background:transparent;color:inherit;min-height:30px;padding:0 12px;border-radius:14px}.viz-carousel-controls>button{width:30px;padding:0}.viz-carousel-picker>summary{list-style:none}.viz-carousel-picker>summary::-webkit-details-marker{display:none}.viz-carousel-count{opacity:.5}.viz-carousel-options{position:absolute;left:0;right:0;bottom:calc(100% + 4px);display:flex;flex-direction:column;padding:4px;background:var(--background);border:1px solid var(--border);border-radius:8px}.viz-carousel-options button{justify-content:flex-start}.viz-carousel-options button:hover,.viz-carousel-options [aria-current=true]{background:color-mix(in srgb,var(--foreground) 10%,transparent)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}button:focus-visible,summary:focus-visible{outline:2px solid #339cff;outline-offset:3px}
-#ogtech-concepts{width:100%;font-family:Arial,Helvetica,sans-serif}
-#ogtech-concepts .og-site{--og-paper:light-dark(#f4f6f3,#0d201f);--og-ink:light-dark(#102c2c,#e6efeb);--og-muted:light-dark(#45625f,#adc2bb);--og-line:light-dark(#cbd8d1,#38544e);--og-surface:light-dark(#e6ede7,#17312e);--og-accent:light-dark(#226448,#b6dba4);--og-on-accent:light-dark(#ffffff,#132819);background:var(--og-paper);color:var(--og-ink);container-type:inline-size;min-height:920px;box-sizing:border-box}
-#ogtech-concepts .og-site *{box-sizing:border-box}
-#ogtech-concepts .og-nav{display:flex;gap:22px;align-items:center;justify-content:space-between;padding:28px 36px;border-bottom:1px solid var(--og-line);padding-right:104px}
-#ogtech-concepts .og-brand{font-size:29px;font-weight:700;letter-spacing:-1.4px;line-height:1}
-#ogtech-concepts .og-brand small{display:block;font-size:9px;letter-spacing:2.1px;font-weight:400;margin-top:9px;white-space:nowrap}
-#ogtech-concepts .og-navlinks{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-#ogtech-concepts button{font:inherit}
-#ogtech-concepts .og-link{border:0;background:transparent;color:var(--og-ink);font-size:12px;padding:8px 0;text-align:left}
-#ogtech-concepts .og-link:hover{text-decoration:underline;text-underline-offset:5px}
-#ogtech-concepts .og-link[aria-expanded=true]{text-decoration:underline;text-underline-offset:5px}
-#ogtech-concepts .og-hero{display:grid;grid-template-columns:1.18fr 1fr;gap:42px;padding:56px 36px 48px;align-items:center}
-#ogtech-concepts .og-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--og-muted);margin:0 0 23px;line-height:1.6}
-#ogtech-concepts h1{font-size:clamp(36px,5.4cqw,58px);line-height:1.04;font-weight:500;letter-spacing:-2.2px;margin:0 0 24px;max-width:560px}
-#ogtech-concepts h1 em{font-style:normal;color:var(--og-accent)}
-#ogtech-concepts .og-intro{font-size:15px;line-height:1.65;margin:0;max-width:480px;color:var(--og-muted)}
-#ogtech-concepts .og-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:30px}
-#ogtech-concepts .og-primary{border:1px solid var(--og-accent);background:var(--og-accent);color:var(--og-on-accent);font-size:13px;padding:13px 18px;border-radius:3px;line-height:1.35;min-height:44px}
-#ogtech-concepts .og-primary:hover{filter:brightness(.93)}
-#ogtech-concepts .og-secondary{background:transparent;color:var(--og-ink);border:0;padding:13px 0;font-size:13px;min-height:44px;text-align:left}
-#ogtech-concepts .og-secondary:hover{text-decoration:underline;text-underline-offset:5px}
-#ogtech-concepts .og-core{background:var(--og-surface);padding:28px 24px;border-radius:3px;min-width:0}
-#ogtech-concepts .og-core .og-eyebrow{margin:0 0 25px;font-size:10px}
-#ogtech-concepts .og-core-name{font-size:33px;letter-spacing:-1.4px;font-weight:500;margin:0 0 8px;line-height:1.1}
-#ogtech-concepts .og-core-sub{font-size:12px;color:var(--og-muted);line-height:1.5;margin:0}
-#ogtech-concepts .og-connect{display:flex;align-items:center;gap:9px;margin:28px 0;color:var(--og-accent)}
-#ogtech-concepts .og-connect:before,#ogtech-concepts .og-connect:after{content:"";height:1px;background:var(--og-line);flex:1}
-#ogtech-concepts .og-connect span{font-size:12px;border:1px solid var(--og-line);border-radius:100%;width:36px;height:36px;display:grid;place-items:center}
-#ogtech-concepts .og-core-list{margin:0;padding:0;list-style:none}
-#ogtech-concepts .og-core-list li{display:flex;gap:12px;justify-content:space-between;padding:12px 0;font-size:12px;border-top:1px solid var(--og-line);line-height:1.45}
-#ogtech-concepts .og-core-list li span:last-child{color:var(--og-muted);text-align:right}
-#ogtech-concepts .og-principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--og-line);border-bottom:1px solid var(--og-line);padding:28px 36px;gap:27px}
-#ogtech-concepts .og-principles h2{font-size:17px;font-weight:500;line-height:1.25;margin:0 0 10px;letter-spacing:-.35px}
-#ogtech-concepts .og-principles p{font-size:12px;line-height:1.65;color:var(--og-muted);margin:0}
-#ogtech-concepts .og-technology{padding:30px 36px;border-bottom:1px solid var(--og-line)}
-#ogtech-concepts .og-technology .og-eyebrow{margin:0 0 12px}
-#ogtech-concepts .og-technology h2{font-size:26px;line-height:1.2;font-weight:500;letter-spacing:-.7px;margin:0 0 15px}
-#ogtech-concepts .og-technology p:not(.og-eyebrow){font-size:14px;line-height:1.65;color:var(--og-muted);max-width:800px;margin:0 0 12px}
-#ogtech-concepts .og-technology p:last-child{margin-bottom:0}
-#ogtech-concepts .og-install{padding:30px 36px 34px}
-#ogtech-concepts .og-install-head{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:17px}
-#ogtech-concepts .og-install h2{font-size:22px;letter-spacing:-.6px;font-weight:500;margin:0;line-height:1.2}
-#ogtech-concepts .og-install-nav{display:flex;gap:5px;flex-wrap:wrap}
-#ogtech-concepts .og-choice{font-size:11px;padding:9px 10px;border:1px solid var(--og-line);border-radius:2px;background:transparent;color:var(--og-ink)}
-#ogtech-concepts .og-choice[aria-pressed=true]{background:var(--og-ink);color:var(--og-paper);border-color:var(--og-ink)}
-#ogtech-concepts .og-install-copy{font-size:13px;color:var(--og-muted);line-height:1.6;margin:0;max-width:730px;min-height:42px}
-#ogtech-concepts .og-panel{padding:24px 36px;background:var(--og-surface);border-bottom:1px solid var(--og-line)}
-#ogtech-concepts .og-panel h2{font-size:22px;font-weight:500;margin:0 0 12px;letter-spacing:-.5px}
-#ogtech-concepts .og-panel p{font-size:14px;line-height:1.65;max-width:760px;margin:0;color:var(--og-muted)}
-#ogtech-concepts .og-panel a{color:var(--og-ink)}
-#ogtech-concepts .og-tech .og-hero{display:block;padding:45px 36px 32px}
-#ogtech-concepts .og-tech h1{max-width:760px;font-size:clamp(37px,6cqw,64px)}
-#ogtech-concepts .og-tech .og-intro{max-width:670px}
-#ogtech-concepts .og-tech .og-eyebrow{margin-bottom:20px}
-#ogtech-concepts .og-system{margin:0 36px 34px;padding:27px;background:var(--og-surface);display:grid;grid-template-columns:1fr 1.2fr 1fr;align-items:center;gap:24px;border-radius:3px}
-#ogtech-concepts .og-system-side{min-width:0}
-#ogtech-concepts .og-system-label{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--og-muted);margin-bottom:17px}
-#ogtech-concepts .og-system-side p{font-size:13px;line-height:1.5;margin:10px 0}
-#ogtech-concepts .og-system-core{border-left:1px solid var(--og-line);border-right:1px solid var(--og-line);padding:18px;text-align:center}
-#ogtech-concepts .og-system-core strong{display:block;font-size:28px;font-weight:500;letter-spacing:-1px;line-height:1.05;margin:0 0 11px}
-#ogtech-concepts .og-system-core p{font-size:12px;color:var(--og-muted);line-height:1.5;margin:0}
-#ogtech-concepts .og-tech .og-principles{padding-top:24px;padding-bottom:24px}
-@container(max-width:700px){
- #ogtech-concepts .og-nav{padding:25px 24px;padding-right:98px;gap:15px;align-items:flex-start}
- #ogtech-concepts .og-navlinks{gap:12px}
- #ogtech-concepts .og-hero{gap:26px;padding:36px 24px}
- #ogtech-concepts .og-core{padding:23px 18px}
- #ogtech-concepts .og-core-name{font-size:28px}
- #ogtech-concepts .og-principles{padding:25px 24px;gap:18px}
- #ogtech-concepts .og-install{padding:26px 24px}
- #ogtech-concepts .og-technology{padding:27px 24px}
- #ogtech-concepts .og-tech .og-hero{padding:36px 24px 28px}
- #ogtech-concepts .og-system{margin:0 24px 28px;padding:22px 18px;gap:16px}
- #ogtech-concepts .og-system-core{padding:14px}
- #ogtech-concepts .og-system-core strong{font-size:24px}
- #ogtech-concepts .og-panel{padding:24px}
-}
-@container(max-width:510px){
- #ogtech-concepts .og-site-inner{min-height:1580px}
- #ogtech-concepts .og-nav{flex-direction:column;padding-right:95px;gap:17px}
- #ogtech-concepts .og-navlinks{gap:17px}
- #ogtech-concepts .og-hero{grid-template-columns:1fr;gap:28px;padding:32px 22px}
- #ogtech-concepts h1{font-size:43px;letter-spacing:-1.8px;max-width:420px}
- #ogtech-concepts .og-eyebrow{font-size:10px;margin-bottom:18px}
- #ogtech-concepts .og-intro{font-size:14px}
- #ogtech-concepts .og-core{padding:23px}
- #ogtech-concepts .og-core .og-eyebrow{margin-bottom:16px}
- #ogtech-concepts .og-connect{margin:16px 0}
- #ogtech-concepts .og-core-list li{padding:9px 0}
- #ogtech-concepts .og-principles{grid-template-columns:1fr;padding:26px 22px;gap:20px}
- #ogtech-concepts .og-principles h2{margin-bottom:5px}
- #ogtech-concepts .og-install{padding:27px 22px}
- #ogtech-concepts .og-technology{padding:27px 22px}
- #ogtech-concepts .og-install-head{gap:18px}
- #ogtech-concepts .og-install h2{font-size:22px}
- #ogtech-concepts .og-choice{padding:10px 8px}
- #ogtech-concepts .og-tech .og-hero{padding:32px 22px}
- #ogtech-concepts .og-tech h1{font-size:43px}
- #ogtech-concepts .og-system{grid-template-columns:1fr;margin:0 22px 30px;padding:24px;gap:18px}
- #ogtech-concepts .og-system-side{display:flex;gap:8px 18px;flex-wrap:wrap}
- #ogtech-concepts .og-system-label{width:100%;margin-bottom:3px}
- #ogtech-concepts .og-system-side p{margin:0;font-size:12px}
- #ogtech-concepts .og-system-core{border:0;border-top:1px solid var(--og-line);border-bottom:1px solid var(--og-line);padding:20px 0}
- #ogtech-concepts .og-system-core strong{font-size:31px}
-}
-@media(pointer:coarse){#ogtech-concepts .og-choice,#ogtech-concepts .og-link{min-height:44px}}
-</style>
-</head><body>
-<div id="ogtech-concepts" class="viz-carousel" aria-label="Forsideforslag for OgTech" role="group" data-active-variant="Trygg drift">
- <section data-variant="Trygg drift" aria-label="Forside med kundeverdi først" role="group">
-  <div class="og-site og-trust" aria-label="Trygg drift – nettsidekonsept">
-   <div class="og-site-inner">
-    <header class="og-nav">
-     <div class="og-brand">OgTech<small>ONSITE GAS TECHNOLOGY</small></div>
-     <nav class="og-navlinks" aria-label="Hovedmeny"><button type="button" class="og-link" data-panel="solutions" aria-expanded="false">Løsninger</button><button type="button" class="og-link" data-panel="core" aria-expanded="false">OgTech Core</button><button type="button" class="og-link" data-panel="contact" aria-expanded="false">Kontakt</button></nav>
-    </header>
-    <div class="og-panel" hidden aria-live="polite"></div>
-    <main>
-     <div class="og-hero">
-      <div>
-       <p class="og-eyebrow">Oksygenløsninger for havbruk</p>
-       <h1>Tryggere drift.<br><em>Mer kontroll.</em><br>Færre bekymringer.</h1>
-       <p class="og-intro">Vi kombinerer energieffektiv oksygenproduksjon, kompakt anleggsdesign og OgTech Core for en tryggere og enklere oppdrettshverdag.</p>
-       <div class="og-actions"><button type="button" class="og-primary" data-panel="contact" aria-expanded="false">Snakk med oss om ditt anlegg</button><button type="button" class="og-secondary" data-panel="core" aria-expanded="false">Bli kjent med OgTech Core ↗</button></div>
-      </div>
-      <div class="og-core" aria-label="Prinsippskisse av samspillet i OgTech Core">
-       <p class="og-eyebrow">Gasskompetanse satt i system</p>
-       <h2 class="og-core-name">OgTech Core</h2>
-       <p class="og-core-sub">Binder sammen anlegg, data og drift.</p>
-       <div class="og-connect" aria-hidden="true"><span>O₂</span><span>↔</span><span>Core</span></div>
-       <ul class="og-core-list"><li><span>Produksjon og reserve</span><span>Samspill</span></li><li><span>Driftsdata og trender</span><span>Innsikt</span></li><li><span>Operatør og anlegg</span><span>Oversikt</span></li></ul>
-      </div>
-     </div>
-     <div class="og-principles">
-      <section><h2>Trygghet i helheten</h2><p>Produksjon og reserveforsyning dimensjonert for behovet på ditt anlegg.</p></section>
-      <section><h2>Energi som utnyttes bedre</h2><p>Riktig produksjonsteknologi, god dimensjonering og driftsdata som grunnlag for optimalisering.</p></section>
-      <section><h2>Enklere for operatøren</h2><p>Oversiktlig styring, tydelige varsler og gjennomtenkt tilgang for service.</p></section>
-     </div>
-     <section class="og-technology">
-      <p class="og-eyebrow">PSA · VSA · VPSA</p>
-      <h2>Riktig teknologi for ditt oksygenbehov.</h2>
-      <p>OgTech er distributør av oksygengeneratorer basert på PSA-, VSA- og VPSA-teknologi. Med vår kompetanse innen lokal gassproduksjon velger og integrerer vi løsningen som passer anleggets kapasitet, oksygenrenhet, leveringstrykk og driftsmønster.</p>
-      <p>VSA og VPSA gir muligheter for svært energieffektiv lokal oksygenproduksjon. Vi vurderer energibruken i hele løsningen, inkludert eventuell komprimering, og kombinerer produksjonsteknologien med kompakt design, reserveforsyning og OgTech Core.</p>
-     </section>
-     <section class="og-install">
-      <div class="og-install-head"><h2>Kompakt. Tilpasset stedet.</h2><div class="og-install-nav" aria-label="Velg installasjon"><button type="button" class="og-choice" data-install="container" aria-pressed="true">Container</button><button type="button" class="og-choice" data-install="barge" aria-pressed="false">Lekter</button><button type="button" class="og-choice" data-install="room" aria-pressed="false">Maskinrom</button><button type="button" class="og-choice" data-install="deck" aria-pressed="false">Dekk</button></div></div>
-      <p class="og-install-copy" aria-live="polite">Et komplett anlegg i kompakt format, med plassering av utstyr og tilgang for drift og vedlikehold planlagt fra starten.</p>
-     </section>
-    </main>
-   </div>
+<title>OgTech – Oksygenløsninger for havbruk</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="OgTech leverer energieffektiv oksygenproduksjon (PSA, VSA, VPSA), kompakte anlegg og OgTech Core for tryggere drift i havbruk.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="index.html">OgTech<small>ONSITE GAS TECHNOLOGY</small></a>
+  <div class="header-right">
+   <nav class="menu" aria-label="Hovedmeny">
+    <button type="button" class="menu-link" data-panel="solutions" aria-expanded="false">Løsninger</button>
+    <button type="button" class="menu-link" data-panel="core" aria-expanded="false">OgTech Core</button>
+    <button type="button" class="menu-link" data-panel="contact" aria-expanded="false">Kontakt</button>
+   </nav>
+   <nav class="lang" aria-label="Språk">
+    <a href="index.html" hreflang="nb" lang="nb" aria-current="page" title="Norsk"><svg viewBox="0 0 22 16" preserveAspectRatio="none" aria-hidden="true"><rect width="22" height="16" fill="#ba0c2f"/><path d="M6 0h4v16H6zM0 6h22v4H0z" fill="#fff"/><path d="M7 0h2v16H7zM0 7h22v2H0z" fill="#00205b"/></svg>NO</a>
+    <a href="en/index.html" hreflang="en" lang="en" title="English"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="uk-t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><path d="M0 0h60v30H0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#uk-t)" stroke="#c8102e" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>EN</a>
+   </nav>
   </div>
- </section>
- <section data-variant="Onsite + Core" aria-label="Forside med teknologi og systemkompetanse først" hidden role="group">
-  <div class="og-site og-tech" aria-label="Onsite og Core – nettsidekonsept">
-   <div class="og-site-inner">
-    <header class="og-nav">
-     <div class="og-brand">OgTech<small>ONSITE GAS TECHNOLOGY</small></div>
-     <nav class="og-navlinks" aria-label="Hovedmeny"><button type="button" class="og-link" data-panel="solutions" aria-expanded="false">Løsninger</button><button type="button" class="og-link" data-panel="core" aria-expanded="false">OgTech Core</button><button type="button" class="og-link" data-panel="contact" aria-expanded="false">Kontakt</button></nav>
-    </header>
-    <div class="og-panel" hidden aria-live="polite"></div>
-    <main>
-     <div class="og-hero">
-      <p class="og-eyebrow">Onsite Gas Technology · Utviklet for havbruk</p>
-      <h1>Oksygen på stedet.<br><em>Intelligens i hele anlegget.</em></h1>
-      <p class="og-intro">PSA, VSA og VPSA. Kompakte anlegg. Samordnet styring. Vi kombinerer produksjonsteknologi og OgTech Core for bedre kontroll og effektiv utnyttelse av energien.</p>
-      <div class="og-actions"><button type="button" class="og-primary" data-panel="core" aria-expanded="false">Se hvordan OgTech Core binder det sammen</button><button type="button" class="og-secondary" data-panel="contact" aria-expanded="false">Snakk med oss ↗</button></div>
-     </div>
-     <div class="og-system" aria-label="Prinsippskisse: OgTech Core knytter oksygensystemet til styring og innsikt">
-      <div class="og-system-side"><div class="og-system-label">Oksygensystemet</div><p>Lokal produksjon</p><p>Lagring og distribusjon</p><p>Reserveforsyning / LOX</p></div>
-      <div class="og-system-core"><strong>OgTech<br>Core</strong><p>Styring · kommunikasjon<br>Driftsdata · oversikt</p></div>
-      <div class="og-system-side"><div class="og-system-label">Bedre grunnlag for</div><p>Å oppdage avvik tidlig</p><p>Å optimalisere driften</p><p>Å planlegge vedlikehold</p></div>
-     </div>
-     <div class="og-principles">
-      <section><h2>Designet som en helhet</h2><p>Produksjon, energibruk og reserveforsyning vurdert samlet.</p></section>
-      <section><h2>Bygget rundt operatøren</h2><p>Tydelig informasjon og en enklere hverdag ved anlegget.</p></section>
-      <section><h2>Tilpasset driftsstedet</h2><p>Container, lekter, maskinrom eller dekk. Løsninger som tar hensyn til plassen.</p></section>
-     </div>
-     <section class="og-technology">
-      <p class="og-eyebrow">Distributør og systemleverandør</p>
-      <h2>PSA, VSA og VPSA. Valgt ut fra ditt behov.</h2>
-      <p>OgTech er distributør av oksygengeneratorer basert på PSA-, VSA- og VPSA-teknologi. Vi velger og integrerer produksjonsteknologien ut fra kapasitet, oksygenrenhet, leveringstrykk og driftsmønster.</p>
-      <p>VSA og VPSA gir muligheter for svært energieffektiv lokal oksygenproduksjon. Vi vurderer energibruken i hele løsningen, inkludert eventuell komprimering, og binder sammen produksjon, reserveforsyning og driftsdata med OgTech Core.</p>
-     </section>
-    </main>
-   </div>
-  </div>
- </section>
- <div class="viz-carousel-controls">
-  <button type="button" class="viz-carousel-previous" aria-label="Forrige forslag">‹</button>
-  <details class="viz-carousel-picker"><summary><span class="viz-carousel-count">1 / 2</span><span class="viz-carousel-name">Trygg drift</span><span aria-hidden="true">⌃</span></summary><div class="viz-carousel-options"><button type="button" aria-current="true">Trygg drift</button><button type="button" aria-current="false">Onsite + Core</button></div></details>
-  <button type="button" class="viz-carousel-next" aria-label="Neste forslag">›</button>
  </div>
- <span class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
-</div>
-<script>
-(() => {
- const root = document.getElementById('ogtech-concepts');
- const copy = {
-  solutions: ['Riktig teknologi. En gjennomtenkt helhet.', 'OgTech er distributør av oksygengeneratorer basert på PSA-, VSA- og VPSA-teknologi. Vi vurderer kapasitet, oksygenrenhet, leveringstrykk, driftsmønster og samlet energibruk for å finne riktig løsning. VSA og VPSA gir muligheter for svært energieffektiv lokal produksjon. Anlegget kan kombineres med flytende oksygen (LOX) for reserveforsyning og forbrukstopper.'],
-  core: ['OgTech Core. Gasskompetanse satt i system.', 'OgTech Core utvikles for å samle styring, kommunikasjon og driftsdata i en oversiktlig løsning. Målet er bedre samspill i oksygensystemet, enklere operatørarbeid og et bedre grunnlag for å oppdage avvik og optimalisere driften.'],
-  contact: ['La oss se på ditt anlegg.', 'Fortell oss om oksygenbehov, plassering og dagens løsning. Sammen finner vi et godt utgangspunkt for produksjon, styring og reserveforsyning.']
- };
- const installs = {
-  container: 'Et komplett anlegg i kompakt format, med plassering av utstyr og tilgang for drift og vedlikehold planlagt fra starten.',
-  barge: 'Oksygenproduksjon og reserveforsyning tilpasset lekterens plass, øvrige systemer og praktiske driftsbehov.',
-  room: 'Et anlegg tilpasset maskinrommet, der utstyrsplassering, ventilasjon og servicetilgang inngår i designet.',
-  deck: 'Kompakt plassering på dekk, med utforming og beskyttelse tilpasset driftsmiljøet og behovet for enkel tilgang.'
- };
- root.querySelectorAll('.og-site').forEach((site,index) => {
-  const panel=site.querySelector('.og-panel');
-  panel.id='ogtech-concept-panel-'+index;
-  site.querySelectorAll('[data-panel]').forEach(button => {
-   button.setAttribute('aria-controls',panel.id);
-   button.addEventListener('click',() => {
-    const key=button.dataset.panel;
-    const close=!panel.hidden && panel.dataset.active===key;
-    panel.hidden=close;
-    panel.dataset.active=close?'':key;
-    site.querySelectorAll('[data-panel]').forEach(b=>b.setAttribute('aria-expanded',String(!close&&b.dataset.panel===key)));
-    if(close)return;
-    panel.replaceChildren();
-    const heading=document.createElement('h2');heading.textContent=copy[key][0];
-    const text=document.createElement('p');text.textContent=copy[key][1];
-    panel.append(heading,text);
-    if(key==='contact'){
-     const link=document.createElement('a');link.href='mailto:kristian@ogtech.no';link.textContent='kristian@ogtech.no';
-     text.append(document.createElement('br'),link);
-    }
-   });
-  });
-  site.querySelectorAll('[data-install]').forEach(button=>button.addEventListener('click',()=>{
-   site.querySelectorAll('[data-install]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-   site.querySelector('.og-install-copy').textContent=installs[button.dataset.install];
-  }));
- });
- // Standalone navigation replaces the host's carousel initialization.
- const variants=Array.from(root.querySelectorAll(':scope > [data-variant]'));
- const picker=root.querySelector('.viz-carousel-picker');
- const choices=Array.from(root.querySelectorAll('.viz-carousel-options button'));
- let active=0;
- const select=index=>{
-  active=(index+variants.length)%variants.length;
-  variants.forEach((v,i)=>{v.hidden=i!==active;choices[i].setAttribute('aria-current',String(i===active));});
-  root.dataset.activeVariant=variants[active].dataset.variant;
-  root.querySelector('.viz-carousel-count').textContent=(active+1)+' / '+variants.length;
-  root.querySelector('.viz-carousel-name').textContent=variants[active].dataset.variant;
-  root.querySelector('[role=status]').textContent=(active+1)+' / '+variants.length+': '+variants[active].dataset.variant;
-  picker.open=false;
- };
- root.querySelector('.viz-carousel-previous').addEventListener('click',()=>select(active-1));
- root.querySelector('.viz-carousel-next').addEventListener('click',()=>select(active+1));
- choices.forEach((button,i)=>button.addEventListener('click',()=>{select(i);picker.querySelector('summary').focus();}));
- picker.addEventListener('keydown',event=>{if(event.key==='Escape'){picker.open=false;picker.querySelector('summary').focus();}});
- document.addEventListener('click',event=>{if(!picker.contains(event.target))picker.open=false;});
-})();
-</script>
-</body></html>
+</header>
+
+<section class="panel" id="panel-solutions" hidden aria-live="polite">
+ <div class="wrap">
+  <h2>Riktig teknologi. En gjennomtenkt helhet.</h2>
+  <p>OgTech er distributør av oksygengeneratorer basert på PSA-, VSA- og VPSA-teknologi. Vi vurderer kapasitet, oksygenrenhet, leveringstrykk, driftsmønster og samlet energibruk for å finne riktig løsning. VSA og VPSA gir muligheter for svært energieffektiv lokal produksjon. Anlegget kan kombineres med flytende oksygen (LOX) for reserveforsyning og forbrukstopper.</p>
+ </div>
+</section>
+<section class="panel" id="panel-core" hidden aria-live="polite">
+ <div class="wrap">
+  <h2>OgTech Core. Gasskompetanse satt i system.</h2>
+  <p>OgTech Core utvikles for å samle styring, kommunikasjon og driftsdata i en oversiktlig løsning. Målet er bedre samspill i oksygensystemet, enklere operatørarbeid og et bedre grunnlag for å oppdage avvik og optimalisere driften.</p>
+ </div>
+</section>
+<section class="panel" id="panel-contact" hidden aria-live="polite">
+ <div class="wrap">
+  <h2>La oss se på ditt anlegg.</h2>
+  <p>Fortell oss om oksygenbehov, plassering og dagens løsning. Sammen finner vi et godt utgangspunkt for produksjon, styring og reserveforsyning.<br><a href="mailto:kristian@ogtech.no">kristian@ogtech.no</a></p>
+ </div>
+</section>
+
+<main>
+ <div class="wrap hero">
+  <div>
+   <p class="eyebrow">Oksygenløsninger for havbruk</p>
+   <h1>Tryggere drift.<br><em>Mer kontroll.</em><br>Færre bekymringer.</h1>
+   <p class="intro">Vi kombinerer energieffektiv oksygenproduksjon, kompakt anleggsdesign og OgTech Core for en tryggere og enklere oppdrettshverdag.</p>
+   <div class="actions">
+    <button type="button" class="btn-primary" data-panel="contact" aria-expanded="false">Snakk med oss om ditt anlegg</button>
+    <button type="button" class="btn-secondary" data-panel="core" aria-expanded="false">Bli kjent med OgTech Core ↗</button>
+   </div>
+  </div>
+  <div class="core" aria-label="Prinsippskisse av samspillet i OgTech Core">
+   <p class="eyebrow">Gasskompetanse satt i system</p>
+   <h2 class="core-name">OgTech Core</h2>
+   <p class="core-sub">Binder sammen anlegg, data og drift.</p>
+   <div class="connect" aria-hidden="true"><span>O₂</span><span>↔</span><span>Core</span></div>
+   <ul class="core-list">
+    <li><span>Produksjon og reserve</span><span>Samspill</span></li>
+    <li><span>Driftsdata og trender</span><span>Innsikt</span></li>
+    <li><span>Operatør og anlegg</span><span>Oversikt</span></li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="principles">
+  <div class="wrap">
+   <section><h2>Trygghet i helheten</h2><p>Produksjon og reserveforsyning dimensjonert for behovet på ditt anlegg.</p></section>
+   <section><h2>Energi som utnyttes bedre</h2><p>Riktig produksjonsteknologi, god dimensjonering og driftsdata som grunnlag for optimalisering.</p></section>
+   <section><h2>Enklere for operatøren</h2><p>Oversiktlig styring, tydelige varsler og gjennomtenkt tilgang for service.</p></section>
+  </div>
+ </div>
+
+ <section class="technology">
+  <div class="wrap">
+   <p class="eyebrow">PSA · VSA · VPSA</p>
+   <h2>Riktig teknologi for ditt oksygenbehov.</h2>
+   <p>OgTech er distributør av oksygengeneratorer basert på PSA-, VSA- og VPSA-teknologi. Med vår kompetanse innen lokal gassproduksjon velger og integrerer vi løsningen som passer anleggets kapasitet, oksygenrenhet, leveringstrykk og driftsmønster.</p>
+   <p>VSA og VPSA gir muligheter for svært energieffektiv lokal oksygenproduksjon. Vi vurderer energibruken i hele løsningen, inkludert eventuell komprimering, og kombinerer produksjonsteknologien med kompakt design, reserveforsyning og OgTech Core.</p>
+  </div>
+ </section>
+
+ <section class="install">
+  <div class="wrap">
+   <div class="install-head">
+    <h2>Kompakt. Tilpasset stedet.</h2>
+    <div class="install-nav" role="group" aria-label="Velg installasjon">
+     <button type="button" class="choice" aria-pressed="true" data-install="container" data-text="Et komplett anlegg i kompakt format, med plassering av utstyr og tilgang for drift og vedlikehold planlagt fra starten.">Container</button>
+     <button type="button" class="choice" aria-pressed="false" data-install="barge" data-text="Oksygenproduksjon og reserveforsyning tilpasset lekterens plass, øvrige systemer og praktiske driftsbehov.">Lekter</button>
+     <button type="button" class="choice" aria-pressed="false" data-install="room" data-text="Et anlegg tilpasset maskinrommet, der utstyrsplassering, ventilasjon og servicetilgang inngår i designet.">Maskinrom</button>
+     <button type="button" class="choice" aria-pressed="false" data-install="deck" data-text="Kompakt plassering på dekk, med utforming og beskyttelse tilpasset driftsmiljøet og behovet for enkel tilgang.">Dekk</button>
+    </div>
+   </div>
+   <p class="install-copy" aria-live="polite">Et komplett anlegg i kompakt format, med plassering av utstyr og tilgang for drift og vedlikehold planlagt fra starten.</p>
+  </div>
+ </section>
+</main>
+
+<footer class="site-footer">
+ <div class="wrap">
+  <span>OgTech AS · Onsite Gas Technology</span>
+  <a href="mailto:kristian@ogtech.no">kristian@ogtech.no</a>
+ </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>
