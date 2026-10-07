@@ -11,7 +11,7 @@ Nettside for OgTech – Onsite Gas Technology.
 | `assets/style.css` | Felles stil, tilpasser seg mobil, laptop og store skjermer, samt lyst/mørkt tema |
 | `assets/main.js` | Menypaneler (Løsninger / OgTech Core / Kontakt) og installasjonsvalg |
 | `assets/favicon.svg` | Ikon i nettleserfanen |
-| `assets/fonts/` | Schibsted Grotesk (variabel font, SIL OFL 1.1), lagt på egen server i stedet for Google Fonts |
+| `assets/fonts/` | Manrope (brødtekst, knapper, menyer) og Space Grotesk (overskrifter), variable fonter (SIL OFL 1.1) lagt på egen server i stedet for Google Fonts |
 
 Språkvelgeren (🇳🇴 NO / 🇬🇧 EN) ligger øverst til høyre i menyen.
 Endrer du tekst på én side, husk å oppdatere tilsvarende tekst på den andre.
