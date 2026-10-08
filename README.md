@@ -2,6 +2,16 @@
 
 Nettside for OgTech – Onsite Gas Technology.
 
+## Versjoner
+
+| Versjon | Mappe | Lenke | Status |
+| --- | --- | --- | --- |
+| v1 | rotmappen (`index.html`, `en/`, `assets/`) | https://ogtech-as.github.io/Ogtech.no/ | Frosset – endres ikke, så de som har fått lenken ser samme side |
+| v2 | `v2/` | https://ogtech-as.github.io/Ogtech.no/v2/ | Arbeidsversjon – alle endringer etter tilbakemeldinger gjøres her |
+
+Hver versjon er en selvstendig kopi med egne `assets/`. Ny versjon: kopier siste versjon til en ny mappe (f.eks. `v3/`).
+Strukturen under gjelder for hver versjon.
+
 ## Struktur
 
 | Fil | Innhold |
