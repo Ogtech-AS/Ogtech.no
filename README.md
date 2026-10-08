@@ -27,10 +27,3 @@ Ved lansering på ogtech.no:
 1. Legg inn domenet under Settings → Pages → Custom domain og pek DNS dit.
 2. Fjern `<meta name="robots" content="noindex">` fra `index.html` og `en/index.html`.
 3. Legg gjerne til `<link rel="alternate" hreflang="…">` mellom norsk og engelsk versjon.
-
-## Prosjekter
-
-`prosjekter/index.html` (norsk) og `en/projects/index.html` (engelsk) viser leverte anlegg og inngåtte avtaler.
-Nytt prosjekt: kopier en `<article class="project">`-blokk, legg den øverst og bytt tekst, bilde og merkelapper
-(`<span class="tag">Levert</span>`, `<span class="tag tag-live">I drift</span>` eller f.eks. `<span class="tag">Avtale inngått</span>`).
-Bilder legges i `assets/img/` som komprimert `.webp`.
