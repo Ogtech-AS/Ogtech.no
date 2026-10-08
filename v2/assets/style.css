@@ -63,7 +63,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #339cff;outline-offset:3p
 .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(32px,4.5vw,72px);align-items:center;padding-block:clamp(40px,7vw,104px)}
 /* Font size follows the text column so each headline line («Færre bekymringer.») fits on one line */
 .hero-text{container-type:inline-size;min-width:0}
-h1{font-size:min(clamp(2.3rem,4.8vw,4rem),10.4cqi);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin-bottom:1.5rem}
+h1{font-size:min(clamp(2.3rem,4.8vw,4rem),9.8cqi);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin-bottom:1.5rem}
 h1 em{font-style:normal;color:var(--accent)}
 .intro{font-size:1rem;line-height:1.65;max-width:32rem;color:var(--muted)}
 .actions{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin-top:2rem}
@@ -98,6 +98,7 @@ h1 em{font-style:normal;color:var(--accent)}
 .technology p:last-child{margin-bottom:0}
 
 /* Installation */
+.install{border-top:1px solid var(--line)}
 .install .wrap{padding-block:clamp(28px,4vw,56px)}
 .install-head{display:flex;justify-content:space-between;gap:1.1rem;align-items:center;flex-wrap:wrap;margin-bottom:1.1rem}
 .install h2{font-size:clamp(1.375rem,2vw,1.75rem);letter-spacing:-.04rem;font-weight:500;line-height:1.2}
@@ -106,6 +107,30 @@ h1 em{font-style:normal;color:var(--accent)}
 .choice:hover{border-color:var(--ink)}
 .choice[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .install-copy{font-size:.875rem;color:var(--muted);line-height:1.6;max-width:46rem;min-height:2.8em}
+
+/* Content sections (v2) */
+.section{border-top:1px solid var(--line)}
+.section>.wrap{padding-block:clamp(40px,5.5vw,88px)}
+.section-head{max-width:46rem;margin-bottom:clamp(24px,3vw,44px)}
+.section-head .eyebrow{margin-bottom:.9rem}
+.section-head h2{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:500;letter-spacing:-.03em;line-height:1.1;margin-bottom:.8rem}
+.section-head p:not(.eyebrow){font-size:1rem;line-height:1.65;color:var(--muted)}
+.grid{display:grid;gap:clamp(20px,2.4vw,36px);margin:0;padding:0;list-style:none}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.item{border-top:2px solid var(--accent);padding-top:1.1rem}
+.item h3{font-size:1.1875rem;font-weight:500;letter-spacing:-.015em;line-height:1.25;margin-bottom:.55rem}
+.item p{font-size:.875rem;line-height:1.65;color:var(--muted)}
+.num{display:block;font-family:var(--font-heading);font-size:.8125rem;font-weight:600;letter-spacing:.06em;color:var(--accent);margin-bottom:.55rem}
+.uptime{background:var(--surface)}
+.note{margin-top:2rem;font-size:.8125rem;color:var(--muted)}
+.contact-grid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.5rem 4rem}
+.contact-grid .section-head{margin-bottom:0}
+.contact-lines{display:grid;gap:.4rem;font-size:clamp(1.05rem,1.6vw,1.3rem)}
+.contact-lines a{font-weight:600;text-decoration:none;color:var(--ink)}
+.contact-lines a:hover{text-decoration:underline;text-underline-offset:5px}
+.contact-lines span{font-size:.8125rem;color:var(--muted)}
+a.btn-primary,a.btn-secondary{display:inline-flex;align-items:center;text-decoration:none}
 
 /* Footer */
 .site-footer{border-top:1px solid var(--line);background:var(--surface)}
@@ -124,4 +149,6 @@ h1 em{font-style:normal;color:var(--accent)}
   .principles .wrap{grid-template-columns:1fr;gap:1.25rem}
   h1{letter-spacing:-.03em}
 }
+@media (max-width:1024px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.grid-3,.grid-4{grid-template-columns:1fr}}
 @media (pointer:coarse){.choice{min-height:44px}}
