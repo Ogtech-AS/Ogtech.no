@@ -16,6 +16,9 @@
     button.addEventListener('click', () => show(active === button.dataset.panel ? null : button.dataset.panel));
   });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && active) show(null); });
+  // Links from other pages (e.g. index.html#contact) open the matching panel
+  const fromHash = location.hash.slice(1);
+  if (document.getElementById('panel-' + fromHash)) show(fromHash);
 
   const installCopy = document.querySelector('.install-copy');
   const choices = document.querySelectorAll('[data-install]');

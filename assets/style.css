@@ -43,8 +43,8 @@ button:focus-visible,a:focus-visible{outline:2px solid #339cff;outline-offset:3p
 .brand small{display:block;font-size:.5625rem;letter-spacing:.13rem;font-weight:400;margin-top:.55rem;white-space:nowrap}
 .header-right{display:flex;align-items:center;gap:1.75rem;flex-wrap:wrap}
 .menu{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.menu-link{border:0;background:transparent;color:var(--ink);font-size:.8125rem;padding:.5rem 0;min-height:44px}
-.menu-link:hover,.menu-link[aria-expanded=true]{text-decoration:underline;text-underline-offset:5px}
+.menu-link{display:inline-flex;align-items:center;border:0;background:transparent;color:var(--ink);font-size:.8125rem;padding:.5rem 0;min-height:44px;text-decoration:none}
+.menu-link:hover,.menu-link[aria-expanded=true],.menu-link[aria-current=page]{text-decoration:underline;text-underline-offset:5px}
 
 .lang{display:flex;align-items:center;gap:.25rem;padding-left:1.5rem;border-left:1px solid var(--line)}
 .lang a{display:flex;align-items:center;gap:.45rem;font-size:.75rem;letter-spacing:.06rem;text-decoration:none;padding:.4rem .55rem;border-radius:3px;min-height:36px;color:var(--muted)}
@@ -107,6 +107,29 @@ h1 em{font-style:normal;color:var(--accent)}
 .choice[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .install-copy{font-size:.875rem;color:var(--muted);line-height:1.6;max-width:46rem;min-height:2.8em}
 
+/* Projects page */
+.page-hero{padding-block:clamp(36px,5vw,80px) clamp(24px,3vw,48px)}
+.page-hero .intro{margin-top:-.25rem}
+.project{border-top:1px solid var(--line)}
+.project .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:start;padding-block:clamp(32px,5vw,72px)}
+.project figure{margin:0}
+.project img{display:block;width:100%;height:auto;border-radius:3px;background:var(--surface)}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem}
+.tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.6875rem;letter-spacing:.08rem;text-transform:uppercase;padding:.3rem .6rem;border:1px solid var(--line);border-radius:2px;color:var(--muted)}
+.tag-live{border-color:var(--accent);color:var(--accent)}
+.tag-live::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:currentColor}
+.project h2{font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:500;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem}
+.project p{font-size:.9375rem;line-height:1.65;color:var(--muted);max-width:40rem;margin-bottom:.75rem}
+.project .lead{font-size:1.0625rem;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem;margin:1.75rem 0 0;border-top:1px solid var(--line);max-width:40rem}
+.facts div{padding:.75rem 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:.6875rem;letter-spacing:.1rem;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:.15rem 0 0;font-size:.9375rem}
+.cta{border-top:1px solid var(--line);background:var(--surface)}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;flex-wrap:wrap;padding-block:2.25rem}
+.cta h2{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:500;letter-spacing:-.02em}
+a.btn-primary{display:inline-flex;align-items:center;text-decoration:none}
+
 /* Footer */
 .site-footer{border-top:1px solid var(--line);background:var(--surface)}
 .site-footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.6rem;font-size:.8125rem;color:var(--muted)}
@@ -124,4 +147,9 @@ h1 em{font-style:normal;color:var(--accent)}
   .principles .wrap{grid-template-columns:1fr;gap:1.25rem}
   h1{letter-spacing:-.03em}
 }
+@media (max-width:860px){
+  .project .wrap{grid-template-columns:1fr}
+  .project figure{max-width:34rem}
+}
+@media (max-width:520px){.facts{grid-template-columns:1fr}}
 @media (pointer:coarse){.choice{min-height:44px}}
