@@ -37,3 +37,14 @@ Ved lansering på ogtech.no:
 1. Legg inn domenet under Settings → Pages → Custom domain og pek DNS dit.
 2. Fjern `<meta name="robots" content="noindex">` fra `index.html` og `en/index.html`.
 3. Legg gjerne til `<link rel="alternate" hreflang="…">` mellom norsk og engelsk versjon.
+
+## Referanser (v2)
+
+`v2/referanser/index.html` (norsk) og `v2/en/references/index.html` (engelsk) har ett kort per kunde (`<article class="ref">`).
+Bilde av et anlegg legges inn øverst i kortet, der kommentaren «Bilde legges inn her senere» står:
+
+```html
+<figure class="ref-img"><img src="../assets/img/erko.webp" width="1200" height="900" alt="Beskrivelse av bildet"></figure>
+```
+
+Bildene legges i `v2/assets/img/` (helst komprimert `.webp`, ca. 1200 px bredt). På engelsk side er stien `../../assets/img/`.

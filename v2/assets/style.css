@@ -23,7 +23,9 @@
 @media (min-width:2200px){html{font-size:18px}}
 
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+[id]{scroll-margin-top:1rem}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
 h1,h2,h3,p,ul{margin:0}
 h1,h2,h3,.brand{font-family:var(--font-heading)}
@@ -126,10 +128,43 @@ h1 em{font-style:normal;color:var(--accent)}
 .note{margin-top:2rem;font-size:.8125rem;color:var(--muted)}
 .contact-grid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.5rem 4rem}
 .contact-grid .section-head{margin-bottom:0}
-.contact-lines{display:grid;gap:.4rem;font-size:clamp(1.05rem,1.6vw,1.3rem)}
-.contact-lines a{font-weight:600;text-decoration:none;color:var(--ink)}
-.contact-lines a:hover{text-decoration:underline;text-underline-offset:5px}
-.contact-lines span{font-size:.8125rem;color:var(--muted)}
+.contact-list{display:grid;grid-template-columns:repeat(3,auto);gap:1rem 2.5rem;margin:0}
+.contact-list dt{font-size:.6875rem;letter-spacing:.1rem;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.contact-list dd{margin:0;font-size:clamp(1rem,1.4vw,1.15rem);line-height:1.5}
+.contact-list a{font-weight:600;text-decoration:none;color:var(--ink)}
+.contact-list a:hover{text-decoration:underline;text-underline-offset:5px}
+
+/* "Delivered to" strip under the hero */
+.proof{border-top:1px solid var(--line)}
+.proof .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.75rem 2rem;padding-block:1.25rem}
+.proof p{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.75rem;font-family:var(--font-heading);font-size:clamp(1.05rem,1.6vw,1.3rem)}
+.proof strong{font-weight:500}
+.proof-label{font-family:var(--font-body);font-size:.6875rem;letter-spacing:.125rem;text-transform:uppercase;color:var(--muted)}
+.proof a{font-size:.875rem;color:var(--ink);text-underline-offset:5px}
+
+/* References page */
+.page-hero{padding-block:clamp(36px,5vw,80px) clamp(24px,3vw,48px)}
+.refs{border-top:1px solid var(--line)}
+.refs>.wrap{padding-block:clamp(32px,5vw,72px)}
+.refs .grid{align-items:start}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ref{background:var(--surface);border-radius:3px;padding:clamp(22px,2.6vw,36px)}
+.ref-img{margin:calc(-1*clamp(22px,2.6vw,36px)) calc(-1*clamp(22px,2.6vw,36px)) 1.5rem}
+.ref-img img{display:block;width:100%;height:auto;border-radius:3px 3px 0 0}
+.ref h2{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:500;letter-spacing:-.03em;line-height:1.1;margin-bottom:.9rem}
+.ref p{font-size:.9375rem;line-height:1.65;color:var(--muted);margin-bottom:.75rem}
+.ref .lead{font-size:1.0625rem;color:var(--ink)}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem}
+.tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.6875rem;letter-spacing:.08rem;text-transform:uppercase;padding:.3rem .6rem;border:1px solid var(--line);border-radius:2px;color:var(--muted)}
+.tag-live{border-color:var(--accent);color:var(--accent)}
+.tag-live::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:currentColor}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem;margin:1.5rem 0 0;border-top:1px solid var(--line)}
+.facts div{padding:.7rem 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:.6875rem;letter-spacing:.1rem;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:.15rem 0 0;font-size:.9375rem}
+.cta{border-top:1px solid var(--line);background:var(--surface)}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;flex-wrap:wrap;padding-block:2.25rem}
+.cta h2{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:500;letter-spacing:-.02em}
 a.btn-primary,a.btn-secondary{display:inline-flex;align-items:center;text-decoration:none}
 
 /* Footer */
@@ -150,5 +185,7 @@ a.btn-primary,a.btn-secondary{display:inline-flex;align-items:center;text-decora
   h1{letter-spacing:-.03em}
 }
 @media (max-width:1024px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:720px){.grid-3,.grid-4{grid-template-columns:1fr}}
+@media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+@media (max-width:720px){.grid-3,.grid-4{grid-template-columns:1fr}.contact-list{grid-template-columns:1fr}}
+@media (max-width:520px){.facts{grid-template-columns:1fr}}
 @media (pointer:coarse){.choice{min-height:44px}}

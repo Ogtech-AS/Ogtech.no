@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OgTech – Oksygenanlegg for havbruk med automatisk reserve</title>
 <meta name="robots" content="noindex">
-<meta name="description" content="OgTech dimensjonerer og integrerer oksygenanlegg for havbruk, med automatisk reserve, fjernovervåking, varsler og energirapport gjennom OgTech Core.">
+<meta name="description" content="OgTech dimensjonerer og setter sammen oksygenanlegg for havbruk, med automatisk reserve, fjernovervåking, varsler og energirapport gjennom OgTech Core.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,9 +17,10 @@
   <a class="brand" href="index.html">OgTech<small>ONSITE GAS TECHNOLOGY</small></a>
   <div class="header-right">
    <nav class="menu" aria-label="Hovedmeny">
-    <button type="button" class="menu-link" data-panel="solutions" aria-expanded="false">Løsninger</button>
-    <button type="button" class="menu-link" data-panel="core" aria-expanded="false">OgTech Core</button>
-    <button type="button" class="menu-link" data-panel="contact" aria-expanded="false">Kontakt</button>
+    <a class="menu-link" href="#losninger">Løsninger</a>
+    <a class="menu-link" href="#ogtech-core">OgTech Core</a>
+    <a class="menu-link" href="referanser/index.html">Referanser</a>
+    <a class="menu-link" href="#kontakt">Kontakt</a>
    </nav>
    <nav class="lang" aria-label="Språk">
     <a href="index.html" hreflang="nb" lang="nb" aria-current="page" title="Norsk"><svg viewBox="0 0 22 16" preserveAspectRatio="none" aria-hidden="true"><rect width="22" height="16" fill="#ba0c2f"/><path d="M6 0h4v16H6zM0 6h22v4H0z" fill="#fff"/><path d="M7 0h2v16H7zM0 7h22v2H0z" fill="#00205b"/></svg>NO</a>
@@ -29,40 +30,21 @@
  </div>
 </header>
 
-<section class="panel" id="panel-solutions" hidden aria-live="polite">
- <div class="wrap">
-  <h2>Fra behov til anlegg i drift.</h2>
-  <p>Vi dimensjonerer oksygenanlegget ut fra kapasitet, oksygenrenhet, leveringstrykk og driftsmønster, og velger produksjonsteknologien – PSA, VSA eller VPSA – som gir lav energibruk for ditt behov. Deretter integrerer vi generator, reserve og styring til ett anlegg, og følger det opp etter levering. Reserven kan for eksempel være flytende oksygen (LOX), som også dekker forbrukstopper.</p>
- </div>
-</section>
-<section class="panel" id="panel-core" hidden aria-live="polite">
- <div class="wrap">
-  <h2>OgTech Core. Styring og overvåking i én løsning.</h2>
-  <p>OgTech Core kobler inn reserven automatisk, gir fjernovervåking av trykk, renhet og flow, varsler ved avvik og rapporterer energibruk per produsert oksygen. Core er under utvikling og bygges ut i takt med anleggene vi leverer.</p>
- </div>
-</section>
-<section class="panel" id="panel-contact" hidden aria-live="polite">
- <div class="wrap">
-  <h2>La oss se på ditt anlegg.</h2>
-  <p>Fortell oss om oksygenbehov, plassering og dagens løsning. Sammen finner vi et godt utgangspunkt for produksjon, styring og reserve.<br><a href="mailto:kontakt@ogtech.no">kontakt@ogtech.no</a></p>
- </div>
-</section>
-
 <main>
  <div class="wrap hero">
   <div class="hero-text">
    <p class="eyebrow">Oksygenanlegg for havbruk</p>
    <h1>Oksygen på stedet.<br><em>Reserve som tar over.</em><br>Fulgt opp på avstand.</h1>
-   <p class="intro">Vi dimensjonerer og integrerer oksygenanlegg for havbruk. Stopper produksjonen, tar reserven over automatisk – og med OgTech Core følger vi anlegget fra der vi er.</p>
+   <p class="intro">Vi dimensjonerer og setter sammen oksygenanlegg for havbruk. Hvis produksjonen stopper, tar reserven over automatisk, og med OgTech Core har vi oversikt over anlegget uansett hvor vi er.</p>
    <div class="actions">
-    <a class="btn-primary" href="#kontakt">Snakk med oss om ditt anlegg</a>
+    <a class="btn-primary" href="#kontakt">Snakk med oss om anlegget ditt</a>
     <a class="btn-secondary" href="#ogtech-core">Se hva OgTech Core gjør ↓</a>
    </div>
   </div>
-  <div class="core" aria-label="OgTech Core sine fire hovedfunksjoner">
+  <div class="core" aria-label="De fire hovedfunksjonene i OgTech Core">
    <p class="eyebrow">Styring og overvåking</p>
    <h2 class="core-name">OgTech Core</h2>
-   <p class="core-sub">Fire funksjoner som holder oksygenet i gang.</p>
+   <p class="core-sub">Fire funksjoner som sikrer oksygentilførselen.</p>
    <div class="connect" aria-hidden="true"><span>O₂</span><span>↔</span><span>Core</span></div>
    <ul class="core-list">
     <li><span>Automatisk reserve</span><span>Ved stans eller lav renhet</span></li>
@@ -73,33 +55,40 @@
   </div>
  </div>
 
+ <section class="proof" aria-label="Referanser">
+  <div class="wrap">
+   <p><span class="proof-label">Levert til</span><strong>Erko</strong><strong>Hardingsmolt</strong></p>
+   <a href="referanser/index.html">Se referansene →</a>
+  </div>
+ </section>
+
  <section class="section uptime" aria-labelledby="uptime-title">
   <div class="wrap">
    <div class="section-head">
     <p class="eyebrow">Oppetid</p>
-    <h2 id="uptime-title">Oksygenet skal ikke stoppe.</h2>
-    <p>Det er det oppdrettere er mest redde for når det gjelder oksygen – og det vi designer anlegget rundt.</p>
+    <h2 id="uptime-title">Oksygentilførselen skal aldri stoppe.</h2>
+    <p>Det er det oppdretterne frykter mest – og det vi bygger anlegget rundt.</p>
    </div>
    <div class="grid grid-3">
-    <div class="item"><h3>Reserve som tar over</h3><p>Ved stans i produksjonen eller fall i oksygenrenhet går forsyningen automatisk over til reserve, for eksempel flytende oksygen (LOX). Ingen må rekke å gripe inn.</p></div>
-    <div class="item"><h3>Avvik oppdages tidlig</h3><p>Trykk, renhet og flow overvåkes kontinuerlig. Varsler går ut før et avvik får betydning for fisken.</p></div>
-    <div class="item"><h3>Hjelp uten å reise ut</h3><p>Med fjerntilgang ser vi anlegget fra der vi er, og kan feilsøke og veilede operatøren med en gang.</p></div>
+    <div class="item"><h3>Reserven tar over</h3><p>Stopper produksjonen eller faller oksygenrenheten, går anlegget automatisk over på reserve, for eksempel flytende oksygen (LOX). Ingen trenger å rekke å gripe inn.</p></div>
+    <div class="item"><h3>Avvik fanges opp tidlig</h3><p>Trykk, renhet og flow overvåkes hele tiden, og varselet går ut før avviket får betydning for fisken.</p></div>
+    <div class="item"><h3>Hjelp uten utrykning</h3><p>Med fjerntilgang ser vi anlegget uansett hvor vi er, og kan feilsøke og veilede operatøren med en gang.</p></div>
    </div>
   </div>
  </section>
 
- <section class="section" aria-labelledby="what-title">
+ <section class="section" id="losninger" aria-labelledby="what-title">
   <div class="wrap">
    <div class="section-head">
     <p class="eyebrow">Dette gjør vi</p>
     <h2 id="what-title">Fra behov til anlegg i drift.</h2>
-    <p>Vi tar ansvar for hele løpet – fra beregningen av oksygenbehovet til oppfølging av anlegget i drift.</p>
+    <p>Vi tar ansvar for hele løpet, fra beregning av oksygenbehovet til oppfølging av anlegget i drift.</p>
    </div>
    <ol class="grid grid-4 steps">
-    <li class="item"><span class="num">01</span><h3>Dimensjonering</h3><p>Vi beregner oksygenbehov, renhet, trykk og driftsmønster, og velger PSA, VSA eller VPSA ut fra hva som gir lav energibruk for behovet.</p></li>
-    <li class="item"><span class="num">02</span><h3>Integrasjon</h3><p>Generator, lagring, reserve og styring bygges sammen til ett anlegg – i container, på lekter, i maskinrom eller på dekk.</p></li>
-    <li class="item"><span class="num">03</span><h3>OgTech Core</h3><p>Styring, automatisk reserve, overvåking og energirapport i én løsning.</p></li>
-    <li class="item"><span class="num">04</span><h3>Oppfølging</h3><p>Vi følger anlegget på avstand etter levering og bistår operatøren når det trengs.</p></li>
+    <li class="item"><span class="num">01</span><h3>Dimensjonering</h3><p>Vi beregner oksygenbehov, renhet, trykk og driftsmønster, og velger den teknologien – PSA, VSA eller VPSA – som gir lavest energibruk for behovet ditt.</p></li>
+    <li class="item"><span class="num">02</span><h3>Integrasjon</h3><p>Generator, lagring, reserve og styring settes sammen til ett komplett anlegg – i container, på lekter, i maskinrom eller på dekk.</p></li>
+    <li class="item"><span class="num">03</span><h3>OgTech Core</h3><p>Styring, automatisk reserve, overvåking og energirapportering i én løsning.</p></li>
+    <li class="item"><span class="num">04</span><h3>Oppfølging</h3><p>Etter levering følger vi anlegget på avstand og hjelper operatøren når det trengs.</p></li>
    </ol>
   </div>
  </section>
@@ -112,10 +101,10 @@
     <p>Core samler styring, overvåking og driftsdata for hele oksygensystemet.</p>
    </div>
    <div class="grid grid-4">
-    <div class="item"><h3>Automatisk reserve</h3><p>Stopper produksjonen eller faller renheten, kobler Core inn reserveforsyningen uten at noen må gjøre noe.</p></div>
-    <div class="item"><h3>Fjernovervåking</h3><p>Trykk, renhet, flow og driftsstatus i sanntid – for operatøren på anlegget og for oss.</p></div>
-    <div class="item"><h3>Varsler</h3><p>Riktig person får beskjed ved avvik, slik at det kan rettes før det får betydning for fisken.</p></div>
-    <div class="item"><h3>Energirapport</h3><p>Energibruk per produsert Nm³ oksygen, så dere ser hva oksygenet koster og hvor det kan spares.</p></div>
+    <div class="item"><h3>Automatisk reserve</h3><p>Stopper produksjonen eller faller renheten, kobler Core inn reserven – uten at noen må gjøre noe.</p></div>
+    <div class="item"><h3>Fjernovervåking</h3><p>Trykk, renhet, flow og driftsstatus i sanntid, både for operatøren på anlegget og for oss.</p></div>
+    <div class="item"><h3>Varsler</h3><p>Riktig person får beskjed ved avvik, slik at det kan rettes før det påvirker fisken.</p></div>
+    <div class="item"><h3>Energirapport</h3><p>Viser energibruken per produsert Nm³ oksygen, så dere ser hva oksygenet koster og hvor det kan spares.</p></div>
    </div>
    <p class="note">OgTech Core er under utvikling og bygges ut i takt med anleggene vi leverer.</p>
   </div>
@@ -124,15 +113,15 @@
  <section class="install">
   <div class="wrap">
    <div class="install-head">
-    <h2>Kompakt. Tilpasset stedet.</h2>
+    <h2>Kompakt og tilpasset plassen.</h2>
     <div class="install-nav" role="group" aria-label="Velg installasjon">
-     <button type="button" class="choice" aria-pressed="true" data-install="container" data-text="Et komplett anlegg i kompakt format, med plassering av utstyr og tilgang for drift og vedlikehold planlagt fra starten.">Container</button>
-     <button type="button" class="choice" aria-pressed="false" data-install="barge" data-text="Oksygenproduksjon og reserveforsyning tilpasset lekterens plass, øvrige systemer og praktiske driftsbehov.">Lekter</button>
-     <button type="button" class="choice" aria-pressed="false" data-install="room" data-text="Et anlegg tilpasset maskinrommet, der utstyrsplassering, ventilasjon og servicetilgang inngår i designet.">Maskinrom</button>
-     <button type="button" class="choice" aria-pressed="false" data-install="deck" data-text="Kompakt plassering på dekk, med utforming og beskyttelse tilpasset driftsmiljøet og behovet for enkel tilgang.">Dekk</button>
+     <button type="button" class="choice" aria-pressed="true" data-install="container" data-text="Et komplett anlegg i kompakt format, der plassering av utstyr og tilgang for drift og vedlikehold er planlagt fra starten.">Container</button>
+     <button type="button" class="choice" aria-pressed="false" data-install="barge" data-text="Oksygenproduksjon og reserve tilpasset plassen om bord, lekterens øvrige systemer og den daglige driften.">Lekter</button>
+     <button type="button" class="choice" aria-pressed="false" data-install="room" data-text="Et anlegg tilpasset maskinrommet, der plassering av utstyr, ventilasjon og servicetilgang er en del av designet.">Maskinrom</button>
+     <button type="button" class="choice" aria-pressed="false" data-install="deck" data-text="Kompakt plassering på dekk, med utforming og beskyttelse tilpasset værforholdene og behovet for enkel tilgang.">Dekk</button>
     </div>
    </div>
-   <p class="install-copy" aria-live="polite">Et komplett anlegg i kompakt format, med plassering av utstyr og tilgang for drift og vedlikehold planlagt fra starten.</p>
+   <p class="install-copy" aria-live="polite">Et komplett anlegg i kompakt format, der plassering av utstyr og tilgang for drift og vedlikehold er planlagt fra starten.</p>
   </div>
  </section>
 
@@ -140,20 +129,22 @@
   <div class="wrap contact-grid">
    <div class="section-head">
     <p class="eyebrow">Kontakt</p>
-    <h2 id="contact-title">Snakk med oss om ditt anlegg.</h2>
-    <p>Fortell oss om oksygenbehov, plassering og dagens løsning, så finner vi et godt utgangspunkt sammen.</p>
+    <h2 id="contact-title">Kontakt oss</h2>
+    <p>Fortell oss om oksygenbehovet, plasseringen og dagens løsning, så finner vi et godt utgangspunkt sammen.</p>
    </div>
-   <div class="contact-lines">
-    <a href="mailto:kontakt@ogtech.no">kontakt@ogtech.no</a>
-   </div>
+   <dl class="contact-list">
+    <div><dt>Telefon</dt><dd><a href="tel:+4797565371">+47 975 65 371</a></dd></div>
+    <div><dt>E-post</dt><dd><a href="mailto:kristian@ogtech.no">kristian@ogtech.no</a><br><a href="mailto:herman@ogtech.no">herman@ogtech.no</a></dd></div>
+    <div><dt>Adresse</dt><dd>Kystveien 2, 4. etg.</dd></div>
+   </dl>
   </div>
  </section>
 </main>
 
 <footer class="site-footer">
  <div class="wrap">
-  <span>OgTech AS · Onsite Gas Technology</span>
-  <a href="mailto:kontakt@ogtech.no">kontakt@ogtech.no</a>
+  <span>OgTech AS · Kystveien 2, 4. etg.</span>
+  <a href="tel:+4797565371">+47 975 65 371</a>
  </div>
 </footer>
 <script src="assets/main.js"></script>
