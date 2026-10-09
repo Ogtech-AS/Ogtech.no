@@ -152,8 +152,11 @@ h1.h1-long{font-size:max(1.75rem,min(3.6rem,6.5cqi));text-wrap:balance}
 .stat-num{font-family:var(--font-heading);font-size:clamp(1.9rem,3.4vw,2.9rem);font-weight:600;letter-spacing:-.03em;line-height:1.05;white-space:nowrap}
 .stat-label{font-size:.875rem;color:var(--muted);margin-top:.45rem}
 
+.sub-title{font-size:.6875rem!important;font-family:var(--font-body)!important;font-weight:400!important;letter-spacing:.125rem;text-transform:uppercase;color:var(--muted);margin:clamp(36px,4vw,56px) 0 1.1rem}
+.principles-list .item{border-top-color:var(--line)}
+
 /* HMI screenshots */
-.hmi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.4vw,36px);margin-top:clamp(28px,3.5vw,52px)}
+.hmi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.4vw,36px)}
 .hmi figure{margin:0}
 .hmi img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .hmi figcaption{font-size:.8125rem;line-height:1.5;color:var(--muted);margin-top:.75rem}
