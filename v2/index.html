@@ -62,6 +62,16 @@
   </div>
  </section>
 
+ <section class="stats" aria-label="Nøkkeltall">
+  <div class="wrap">
+   <div class="grid grid-3">
+    <div class="stat"><p class="stat-num">10–20&nbsp;000&nbsp;kg</p><p class="stat-label">oksygen per døgn</p></div>
+    <div class="stat"><p class="stat-num">24/7</p><p class="stat-label">overvåking med varsler til mobilen</p></div>
+    <div class="stat"><p class="stat-num">Opptil 1000&nbsp;kVA</p><p class="stat-label">strømbackup ved strømbrudd</p></div>
+   </div>
+  </div>
+ </section>
+
  <section class="section uptime" aria-labelledby="uptime-title">
   <div class="wrap">
    <div class="section-head">
@@ -69,9 +79,10 @@
     <h2 id="uptime-title">Sikker oksygentilførsel.</h2>
     <p>Anlegget er bygget for kontinuerlig drift, med reserve, overvåking og fjerntilgang.</p>
    </div>
-   <div class="grid grid-3">
-    <div class="item"><h3>Reserven tar over</h3><p>Stopper produksjonen eller faller oksygenrenheten, går anlegget automatisk over på reserve, for eksempel flytende oksygen (LOX).</p></div>
-    <div class="item"><h3>Avvik fanges opp tidlig</h3><p>Trykk, renhet og flow overvåkes kontinuerlig, med varsling ved avvik.</p></div>
+   <div class="grid grid-4">
+    <div class="item"><h3>Reserven tar over</h3><p>Stopper produksjonen eller faller oksygenrenheten, går anlegget automatisk over på reserve – flytende oksygen (LOX) eller trykkflasker.</p></div>
+    <div class="item"><h3>Avvik fanges opp tidlig</h3><p>Trykk, renhet og flow overvåkes døgnet rundt, med varsler til mobilen ved avvik.</p></div>
+    <div class="item"><h3>Strømbackup</h3><p>Ved strømbrudd holdes anlegget i drift med strømbackup – batteri, hybrid eller diesel, fra små enheter til 1000&nbsp;kVA.</p></div>
     <div class="item"><h3>Hjelp uten utrykning</h3><p>Med fjerntilgang ser vi anlegget uansett hvor vi er, og kan feilsøke og veilede operatøren med en gang.</p></div>
    </div>
   </div>
@@ -103,8 +114,12 @@
    <div class="grid grid-4">
     <div class="item"><h3>Automatisk reserve</h3><p>Stopper produksjonen eller faller renheten, kobler Core inn reserven automatisk.</p></div>
     <div class="item"><h3>Fjernovervåking</h3><p>Trykk, renhet, flow og driftsstatus i sanntid, både for operatøren på anlegget og for oss.</p></div>
-    <div class="item"><h3>Varsler</h3><p>Varsling til ansvarlig person ved avvik i trykk, renhet eller flow.</p></div>
+    <div class="item"><h3>Varsler</h3><p>Varsler til mobilen til ansvarlig person ved avvik i trykk, renhet eller flow.</p></div>
     <div class="item"><h3>Energirapport</h3><p>Energibruk per produsert Nm³ oksygen, som grunnlag for å følge kostnaden og optimalisere driften.</p></div>
+   </div>
+   <div class="hmi">
+    <figure><img src="assets/img/hmi-dashboard-825.webp" srcset="assets/img/hmi-dashboard-640.webp 640w, assets/img/hmi-dashboard-825.webp 825w" sizes="(max-width: 860px) 100vw, 50vw" width="825" height="580" alt="Skjermbilde fra HMI-en med oversikt over oksygenproduksjonen: trykk, temperatur og duggpunkt på innløpet, og trykk, O₂-flow og renhet på utløpet." loading="lazy"><figcaption>Oversikt i HMI-en: trykk, temperatur og duggpunkt inn – trykk, O₂-flow og renhet ut, i sanntid.</figcaption></figure>
+    <figure><img src="assets/img/hmi-operations-825.webp" srcset="assets/img/hmi-operations-640.webp 640w, assets/img/hmi-operations-825.webp 825w" sizes="(max-width: 860px) 100vw, 50vw" width="825" height="605" alt="Skjermbilde fra HMI-en med driftsfunksjoner for oppstart, pause, gjenopptak og nedstengning av anlegget." loading="lazy"><figcaption>Drift i HMI-en: oppstart, pause, gjenopptak og nedstengning, med forutsetninger og forventet tid.</figcaption></figure>
    </div>
    <p class="note">OgTech Core er under utvikling og bygges ut i takt med anleggene vi leverer.</p>
   </div>
