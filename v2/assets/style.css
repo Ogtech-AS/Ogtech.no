@@ -134,8 +134,8 @@ h1.h1-long{font-size:max(1.75rem,min(3.6rem,6.5cqi));text-wrap:balance}
 .stat-label{font-size:.875rem;color:var(--muted);margin-top:.45rem}
 
 .sub-title{font-size:.6875rem!important;font-family:var(--font-body)!important;font-weight:400!important;letter-spacing:.125rem;text-transform:uppercase;color:var(--muted);margin:clamp(36px,4vw,56px) 0 1.1rem}
-.principles-list .item{border-top-color:var(--line)}
 
+.section-head+.sub-title{margin-top:0}
 /* HMI screenshots */
 .hmi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.4vw,36px)}
 .hmi figure{margin:0}
