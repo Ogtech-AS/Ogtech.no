@@ -48,3 +48,9 @@ Bilde av et anlegg legges inn øverst i kortet, der kommentaren «Bilde legges i
 ```
 
 Bildene legges i `v2/assets/img/` (helst komprimert `.webp`, ca. 1200 px bredt). På engelsk side er stien `../../assets/img/`.
+
+## Deling (v2)
+
+Sidene i v2 har Open Graph-metadata, så lenker som deles i Teams, LinkedIn, Messenger o.l. får tittel, beskrivelse og bilde
+(`v2/assets/img/share-nb.jpg` / `share-en.jpg`, 1200×630). `og:url` og `og:image` peker til GitHub Pages-adressen og må
+oppdateres hvis siden flyttes til ogtech.no.
