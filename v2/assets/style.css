@@ -62,11 +62,14 @@ button:focus-visible,a:focus-visible{outline:2px solid #339cff;outline-offset:3p
 .panel a{color:var(--ink);font-weight:700}
 
 /* Hero */
-.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(32px,4.5vw,72px);align-items:center;padding-block:clamp(40px,7vw,104px)}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(32px,4.5vw,72px);align-items:center;padding-block:clamp(40px,7vw,104px)}
 /* Font size follows the text column so each headline line («Færre bekymringer.») fits on one line */
 .hero-text{container-type:inline-size;min-width:0}
 h1{font-size:min(clamp(2.3rem,4.8vw,4rem),9.8cqi);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin-bottom:1.5rem}
 h1 em{font-style:normal;color:var(--accent)}
+/* Longer headline lines: one sentence per line where there is room, balanced wrapping on phones */
+.nowrap{white-space:nowrap}
+h1.h1-long{font-size:max(1.75rem,min(3.6rem,6.5cqi));text-wrap:balance}
 .intro{font-size:1rem;line-height:1.65;max-width:32rem;color:var(--muted)}
 .actions{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin-top:2rem}
 .btn-primary{border:1px solid var(--accent);background:var(--accent);color:var(--on-accent);font-size:.875rem;padding:.8rem 1.15rem;border-radius:3px;line-height:1.35;min-height:44px}
